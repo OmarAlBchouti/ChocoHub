@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ChocolateFactoryManagement/.vs/ChocolateFactoryManagement.API/FileContentIndex
+/.vs
+/ChocolateFactoryManagement/.vs/ChocolateFactoryManagement.API/v17
+/ChocolateFactoryManagement/.vs
+/ChocolateFactoryManagement/ChocolateFactoryManagement.API/.vs
+/ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.API/bin/Debug/net6.0
+/ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.API/obj
+/ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.Domain/bin/Debug/net6.0
+/ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.Domain/obj
+/ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.Infrastructure/bin/Debug/net6.0
+/ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.Infrastructure/obj
