@@ -1,3 +1,6 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using ChocolateFactoryManagement.API.Application.Infrastructure.AutofactModules;
 using ChocolateFactoryManagement.API.Application.Infrastructure.CustomExtentions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,11 +14,19 @@ builder.Services.AddCors(options => options.AddPolicy("CorsPolicy", builder =>
     builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
 }));
 
+// Add services to the container.
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory())
+    .ConfigureContainer<ContainerBuilder>(builder =>
+    {
+        builder.RegisterModule(new ChocolateFactoryModule());
+    });
+
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext(configuration);
+builder.Services.AddAutoMapper();
 
 var app = builder.Build();
 
@@ -31,5 +42,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("CorsPolicy");
 
 app.Run();

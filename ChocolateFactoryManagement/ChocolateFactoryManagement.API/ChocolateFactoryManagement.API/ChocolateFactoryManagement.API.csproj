@@ -9,6 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.0.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -25,6 +28,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ChocolateFactoryManagement.Domain\ChocolateFactoryManagement.Domain.csproj" />
     <ProjectReference Include="..\ChocolateFactoryManagement.Infrastructure\ChocolateFactoryManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\ChocolateFactoryManagement.Services\ChocolateFactoryManagement.Services.csproj" />
   </ItemGroup>
 
 </Project>
