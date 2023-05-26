@@ -25,6 +25,10 @@ namespace ChocolateFactoryManagement.Services.Services
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Get All Factories With ChocolateBar
+        /// </summary>
+        /// <returns></returns>
         public async Task<IEnumerable<FactoryDto>> GetAllAsync()
         {
             var factories = await _factoryRepository.GetAllFactories();
@@ -32,6 +36,13 @@ namespace ChocolateFactoryManagement.Services.Services
             return mappedFactories;
         }
 
+        /// <summary>
+        /// Create ChocolateBar By Factory
+        /// </summary>
+        /// <param name="factoryId"></param>
+        /// <param name="chocolateBar"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public async Task CreateChocolateBar(int factoryId, ChocolateBar chocolateBar)
         {
             var factory = await _factoryRepository.GetFactoryById(factoryId);
@@ -42,6 +53,13 @@ namespace ChocolateFactoryManagement.Services.Services
             await _factoryRepository.UpdateFactory(factory);
         }
 
+        /// <summary>
+        /// Delete ChocolateBar  By Factory
+        /// </summary>
+        /// <param name="factoryId"></param>
+        /// <param name="chocolateBarId"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public async Task DeleteChocolateBar(int factoryId, int chocolateBarId)
         {
             var chocolateBar = await _chocolateBarRepository.GetChocolateBar(factoryId, chocolateBarId);

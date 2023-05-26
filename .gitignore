@@ -15,3 +15,6 @@
 /ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.Infrastructure/obj
 /ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.Services/bin/Debug/net6.0
 /ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.Services/obj
+/ChocolateFactoryManagement/ChocolateFactoryManagement.API/packages
+/ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.Test/bin/Debug/net6.0
+/ChocolateFactoryManagement/ChocolateFactoryManagement.API/ChocolateFactoryManagement.Test/obj

@@ -9,7 +9,6 @@ namespace ChocolateFactoryManagement.Services.Services
     {
         Task CreateWholesalerStock(WholesalerStockDto stock);
         Task UpdateWholesalerStock(int wholesalerId, StockRequestDto stock);
-
         Task<QuoteSummaryDto> GenerateQuote(RequestDto quote);
     }
 
@@ -26,6 +25,12 @@ namespace ChocolateFactoryManagement.Services.Services
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Create Wholesaler Stock 
+        /// </summary>
+        /// <param name="stock"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public async Task CreateWholesalerStock(WholesalerStockDto stock)
         {
             var mappedStock = _mapper.Map<WholesalerStock>(stock);
@@ -41,6 +46,13 @@ namespace ChocolateFactoryManagement.Services.Services
             await _wholesalerRepository.AddStock(mappedStock);
         }
 
+        /// <summary>
+        /// Update Wholesaler Stock
+        /// </summary>
+        /// <param name="wholesalerId"></param>
+        /// <param name="stock"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public async Task UpdateWholesalerStock(int wholesalerId, StockRequestDto stock)
         {
             var existingChocolateBar = await _chocolateBarRepository.GetChocolateBarById(stock.ChocolateBarId);
@@ -70,6 +82,13 @@ namespace ChocolateFactoryManagement.Services.Services
             }
         }
 
+
+        /// <summary>
+        /// Generate Quote From Wholesaler For Client
+        /// </summary>
+        /// <param name="quote"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         public async Task<QuoteSummaryDto> GenerateQuote(RequestDto quote)
         {
             decimal totalPrice = 0;

@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChocolateFactoryManagement.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChocolateFactoryManagement.Infrastructure", "ChocolateFactoryManagement.Infrastructure\ChocolateFactoryManagement.Infrastructure.csproj", "{7444AE56-0D8A-47E3-997F-413D20D3C649}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChocolateFactoryManagement.Services", "ChocolateFactoryManagement.Services\ChocolateFactoryManagement.Services.csproj", "{827E0586-12A6-4029-8391-199FB161C151}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChocolateFactoryManagement.Services", "ChocolateFactoryManagement.Services\ChocolateFactoryManagement.Services.csproj", "{827E0586-12A6-4029-8391-199FB161C151}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChocolateFactoryManagement.Test", "ChocolateFactoryManagement.Test\ChocolateFactoryManagement.Test.csproj", "{861BBB14-2E80-46B9-B94B-591401674B7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{827E0586-12A6-4029-8391-199FB161C151}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{827E0586-12A6-4029-8391-199FB161C151}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{827E0586-12A6-4029-8391-199FB161C151}.Release|Any CPU.Build.0 = Release|Any CPU
+		{861BBB14-2E80-46B9-B94B-591401674B7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{861BBB14-2E80-46B9-B94B-591401674B7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{861BBB14-2E80-46B9-B94B-591401674B7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{861BBB14-2E80-46B9-B94B-591401674B7F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
